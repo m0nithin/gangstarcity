@@ -50,6 +50,10 @@
   </head>
 
   <body class="body">
+    <audio preload="metadata" id="backgroundAudio" loop>
+      <source src="/bad.mp3" type="audio/mp3" preload="metadata" />
+      Your browser does not support the audio element.
+    </audio>
     <section class="section-7"></section>
     <div
       data-animation="default"
@@ -67,7 +71,7 @@
           style="opacity: 0"
           class="heading-2"
         >
-          0x00000000000000000000000000000000000
+          0xB60b45B04Ab895CCe721D3f7fA90b2aD60244415
         </h1>
         <div>
           <div
@@ -75,7 +79,7 @@
             class="w-layout-blockcontainer container-3 w-container"
           >
             <a
-              href="https://app.uniswap.org/tokens/ethereum/0x00000000000000000000000000000000000"
+              href="https://app.uniswap.org/tokens/ethereum/0xB60b45B04Ab895CCe721D3f7fA90b2aD60244415"
               class="button w-button"
               style="
                 background-image: url(/sgin.png) !important;
@@ -112,7 +116,7 @@
               >Telegram</a
             >
             <a
-              href="https://www.dextools.io/app/en/ether/pair-explorer/0x00000000000000000000000000000000000"
+              href="https://www.dextools.io/app/en/ether/pair-explorer/0xB60b45B04Ab895CCe721D3f7fA90b2aD60244415"
               class="button w-button"
               style="
                 background-image: url(/sgin.png) !important;
@@ -357,6 +361,18 @@
         </div>
       </div>
     </section>
+    <script>
+      // Get the audio element
+      var audio = document.getElementById("backgroundAudio");
+
+      // Add a delay of 10 seconds before playing the audio
+      setTimeout(function () {
+        // Check if the audio is paused (to avoid restarting if user interacted)
+        if (audio.paused) {
+          audio.play();
+        }
+      }, 5000); // 10 seconds in milliseconds
+    </script>
     <script
       src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6539d7b7c9cb136a1e12eeae"
       type="text/javascript"
